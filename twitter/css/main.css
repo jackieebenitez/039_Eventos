@@ -4,21 +4,15 @@ p{
 }
 
 .move-btn{
-	margin-left: 220px;
+	margin-left: 315px;
 }
 
 .tareas{
 	height:100px;
-	width:690px;
+	width:700px;
 	margin-bottom:5px;
 	margin-left: 220px;
 }
 .mg-10{
 	margin-top:30px;
-}
-
-li:checked{
-	height: 20px;
-	width:20px;
-	color:red;
 }

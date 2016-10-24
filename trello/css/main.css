@@ -2,7 +2,24 @@
     margin-top: 30px;
     margin-left:50px;
 }
+.padding{
+	padding-top: 30px;
+	padding-left: 50px;
+}
 
 .move-input{
 	margin-top:30px;
+	margin-left:45px;
 }
+
+.inline{
+	display: inline-block;
+}
+
+div{
+	background-color:#ff9872;
+}
+.tarjeta{
+	background-color: #ff7f50;
+}
+

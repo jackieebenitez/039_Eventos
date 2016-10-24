@@ -10,56 +10,31 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
-		<header>
-			<div id="myDIV" class="header text-center">
-		  		<p>TO DO APP</p>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<p class="text-center mg-10">TODO APP</p>
 			</div>
-		</header>
-		<section>
-			<form>
-				<input type="text" id="myInput" placeholder="Qué tienes que hacer hoy?" class="tareas mg-10">
-			</form>
-		  	<button type="button" class="btn btn-warning move-btn" onclick="newElement()" class="addBtn">Añadir</button>
-		  	<p class="text-center mg-10"> WRITE YOUR ACTIVITIES HERE: </p>
-			<ul id="myUL" class="text-center list-unstyled mg-10">
-			</ul>
-		</section>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+			<!-- en la siguiente línea está el ID que debo mandar llamar-->
+				<textarea class="center-block tareas"  type="text" id="task" placeholder="Escribe tus actividades"></textarea>
+    		</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+			<!--al momento de apretar el botón se hace todo lo que está en JS-->
+				<button onclick="todoList()" class="btn btn-warning move-btn">Agregar</button>
+				<p class="text-center">TO DO LIST:</p>
+				<h5 class="text-center"><em>You are capable of amazing things</em></h5>
+				<ul class="list-group mg-10" id="list">
+				</ul>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	</body>
 </html>
-<!--<section>
-		<form name="form">
-      		<input type="text" placeholder="Tarea a realizar" id="item" name="itemEntered" class="input-size"/>
-    	</form>
-    	<input type= "button" class="btn btn-primary block" value="Añadir tarea" id="Enter" onclick="addItem();"/>
-    	<div>
-  			<div id="items-container">
-    			<h4>Ingresa las actividades del día:</h4>
-    			<hr />
-    			<ul id="items-listed">
-    				<li>
-    			</ul>
-    			<form>
-      				<input type="button" value="¡Tarea hecha!" onclick="removeItem();" />
-    			</form>
-  			</div>
-		</div>
-	</section>-->
-<!-- class="container-fluid">
-		<h1>To Do List Application</h1>
-		<form id="todoForm">
-			<input type="text" id="todoInput">
-			<button type="button" onclick="todoList()">Add Item</button>
-		</form>
-		<ul id="todoList">
-		</ul>
-		<form>
-      		<input type="button" value="¡Tarea hecha!" onclick="removeItem();" />
-    	</form>
-	</div>-->
-
-<!---->

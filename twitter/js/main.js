@@ -1,4 +1,98 @@
-/*// Create a new list item when clicking on the "Add" button
+function strike (){
+  console.log(strike)
+  var strike = this.parentElement;
+  if (this.checked) {                  
+     strike.style.textDecoration= "line-through";
+  }
+ else{                                  
+    strike.style.textDecoration= "none";
+ }
+}
+
+function todoList() {
+  var li = document.createElement("li"); // crear un li
+  li.className = "list-group-item"; // quitar los dots al li 
+  var input = document.createElement("input"); // crear un input con el valor:
+  input.type="checkbox"; //checkbox
+  var inputValue = document.getElementById("task").value; //se toma el valor de task y lo convierto en:
+  var texto = document.createTextNode(inputValue); //texto
+  li.appendChild(input); 
+  li.appendChild(texto);
+//lo que sigue es la alerta por si el usuario no escribe nada en el textarea
+  if (inputValue === '') {
+    alert("¿Estás seguro que no harás nada hoy?");
+  } else {
+    document.getElementById("list").appendChild(li);
+  }
+  document.getElementById("task").value = "";
+
+// creo el span para el bote de basura. qué hacer cuando se pica el bote y
+//tachar el texto
+  var span = document.createElement("SPAN");
+  span.className = "glyphicon glyphicon-trash pull-right";
+  li.appendChild(span);
+//cuando le piquen al bote de basura
+  span.onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  } //y ahora wuuuujuuuuuuuuuu ya pude tacharlo yeiiii
+  input.addEventListener("click", strike);
+}
+
+
+
+/*function get_todos() {
+    var todos = new Array;
+    var todos_str = localStorage.getItem('todo');
+    if (todos_str !== null) {
+        todos = JSON.parse(todos_str); 
+    }
+    return todos;
+}
+ 
+function add() {
+    var task = document.getElementById('task').value;
+ 
+    var todos = get_todos();
+    todos.push(task);
+    localStorage.setItem('todo', JSON.stringify(todos));
+ 
+    show();
+ 
+    return false;
+}
+ 
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+ 
+    show();
+ 
+    return false;
+}
+ 
+function show() {
+    var todos = get_todos();
+ 
+    var html = '<ul>';
+    for(var i=0; i<todos.length; i++) {
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+    };
+    html += '</ul>';
+ 
+    document.getElementById('todos').innerHTML = html;
+ 
+    var buttons = document.getElementsByClassName('remove');
+    for (var i=0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
+}
+ 
+document.getElementById('add').addEventListener('click', add);
+show();
+ Create a new list item when clicking on the "Add" button
 function newElement() { 
   var li = document.createElement("li"); //estoy creando un nuevo elemento con el li del html
   var inputValue = document.getElementById("myInput").value; // // estoy agarrando el valor que hay en el id myInput y lo guardo en una var
@@ -54,9 +148,7 @@ list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'li') {
     ev.target.classList.toggle('checked');
   }
-}, false);
-
-//tachar la actividad*/
+}, false);*/
 
 
 
