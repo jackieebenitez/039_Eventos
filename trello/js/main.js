@@ -29,7 +29,6 @@ function crearBoton() {
     			var inputGuardarTarjeta = document.createElement("P")
                 inputGuardarTarjeta.innerHTML = inputTarjeta.value 
                 div.appendChild(inputGuardarTarjeta)
-
     		}
 
     	}
